@@ -297,7 +297,11 @@ Copyright (c) 2024 BISRAT ZENEBE
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files...
+
 ```
+## Each OOP requirement met:
+Requirement Where Classes & ObjectsAll 4 domain classes; seed objects in GymApp constructor
+EncapsulationAll fields are private; setters validate input (e.g. age range, membership whitelist)InheritanceMember extends Person, Trainer extends Person; super() constructor reuseMethod OverridingdisplayInfo() + getRole() in both subclassesMethod Overloadingdescribe(), describe(boolean), describe(String) in GymClassSuperclass referencespolymorphismDemo() in GymApp — Menu option 4
 
 ---
 

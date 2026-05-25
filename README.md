@@ -153,7 +153,7 @@ classDiagram
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/gym-management-system.git
+git clone https://github.com/Bisrat77-tech/GymManagementSystem.git
 cd gym-management-system
 ```
 
@@ -307,4 +307,4 @@ If you found this project helpful or interesting, please give it a ⭐ on GitHub
 
 ---
 
-**Built with ☕ and Java**
+**Built with  Java**

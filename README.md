@@ -299,10 +299,31 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files...
 
 ```
-## Each OOP requirement met:
-Requirement Where Classes & ObjectsAll 4 domain classes; seed objects in GymApp constructor
-EncapsulationAll fields are private; setters validate input (e.g. age range, membership whitelist)InheritanceMember extends Person, Trainer extends Person; super() constructor reuseMethod OverridingdisplayInfo() + getRole() in both subclassesMethod Overloadingdescribe(), describe(boolean), describe(String) in GymClassSuperclass referencespolymorphismDemo() in GymApp — Menu option 4
+## ## ✅ OOP Requirements Traceability Matrix
 
+| OOP Requirement | Implementation Location | Evidence |
+|----------------|------------------------|----------|
+| **Classes & Objects** | `Person.java`, `Member.java`, `Trainer.java`, `Gymclass.java` | 4 domain classes defined; seed objects created in `Gymapp` constructor (lines 24-45) |
+| **Encapsulation** | All class files | All fields `private`; validation in setters (e.g., `Person.setAge()` checks 5-120, `Member.setMembershipType()` whitelists "Basic/Standard/Premium") |
+| **Inheritance** | `Member.java`, `Trainer.java` | `Member extends Person` (line 3), `Trainer extends Person` (line 3); `super(id, name, age, phone)` constructor reuse |
+| **Method Overriding** | `Member.java`, `Trainer.java` | `getRole()` returns "MEMBER"/"TRAINER" (lines 51-53, 52-54); `displayInfo()` in both subclasses |
+| **Method Overloading** | `Gymclass.java` | `describe()` (line 45), `describe(boolean verbose)` (line 50), `describe(String label)` (line 63) — three distinct versions |
+| **Superclass References** | `Gymapp.java` → `polymorphismDemo()` | Menu option 4: `List<Person> people` stores `Member` & `Trainer` objects; runtime polymorphic calls to `getRole()` |
+
+---
+
+### Quick Reference
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                   OOP Pillars Covered                       │
+├─────────────────────────────────────────────────────────────┤
+│  ✓ Encapsulation  →  Private fields + validators           │
+│  ✓ Inheritance    →  Member/Trainer extends Person         │
+│  ✓ Polymorphism   →  Overriding + Overloading              │
+│  ✓ Abstraction    →  Person as base template               │
+└─────────────────────────────────────────────────────────────┘
+```
 ---
 
 ## ⭐ Show Your Support
